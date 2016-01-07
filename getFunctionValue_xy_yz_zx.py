@@ -136,6 +136,7 @@ def printProceeding():
 def execDamask_spectral(loadFile,geomFile):
 	debugMode = "off"			# "on" makes the output of damask printed
 	exitCode = 2
+	#
 	while exitCode == 2:
 		proc=subprocess.Popen(executable='DAMASK_spectral',\
 								args=['--load', loadFile, '--geom', geomFile],\

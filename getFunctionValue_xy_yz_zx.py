@@ -138,7 +138,7 @@ def execDamask_spectral(loadFile,geomFile):
 	exitCode = 2
 	#
 	while exitCode == 2:
-		proc=subprocess.Popen(executable='DAMASK_spectral',\
+		proc=subprocess.Popen(executable='/opt/petsc/gnu-4.9/bin/mpiexec^n 1 DAMASK_spectral',\
 								args=['--load', loadFile, '--geom', geomFile],\
 								stderr=subprocess.PIPE,stdout=subprocess.PIPE, bufsize=1)
 		while proc.poll() is None:               # while process is running
